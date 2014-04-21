@@ -3,7 +3,7 @@
  *
  * @author Christian Bromann <mail@christian-bromann.com>
  * @description converts rgba color to HEX
- * 
+ *
  * @param  {String} color  rgb or rgba color
  * @return {Object}        object with hex and alpha value
  */
@@ -18,13 +18,13 @@ var rgb2hex = module.exports = function colorToHex(color) {
         return color;
     } else if(!digits) {
         // or return if input isn't a valid rgb(a) color
-        return new Error('given color (' + color + ') isn\'t a valid rgb or rgba color');
+        throw new Error('given color (' + color + ') isn\'t a valid rgb or rgba color');
     }
 
     var red = parseInt(digits[3]);
     var green = parseInt(digits[4]);
     var blue = parseInt(digits[5]);
-    var alpha = digits[6] ? /([0-9\.]+)/.exec(digits[6])[0] : 1;
+    var alpha = digits[6] ? /([0-9\.]+)/.exec(digits[6])[0] : '1';
     var rgb = ((blue | green << 8 | red << 16) | 1 << 24).toString(16).slice(1);
 
     // parse alpha value into float
