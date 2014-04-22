@@ -1,4 +1,5 @@
 var rgb2hex = require('../index'),
+    should = require('should'),
     typeofErrorMessage = 'color has to be type of `string`',
     invalidErrorMessage = function(input) { return 'given color (' + input + ') isn\'t a valid rgb or rgba color'; };
 
