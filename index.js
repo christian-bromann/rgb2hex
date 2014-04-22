@@ -8,7 +8,7 @@
  * @return {Object}        object with hex and alpha value
  */
 
-var rgb2hex = module.exports = function colorToHex(color) {
+var rgb2hex = module.exports = function rgb2hex(color) {
 
     if(typeof color !== 'string') {
         // throw error of input isn't typeof string
