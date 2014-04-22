@@ -10,14 +10,22 @@
 
 var rgb2hex = module.exports = function colorToHex(color) {
 
-    // parse input
-    var digits = /(.*?)rgb(a)*\((\d+), (\d+), (\d+)(, [0-9]*\.*[0-9]+)*\)/.exec(color);
+    if(typeof color !== 'string') {
+        // throw error of input isn't typeof string
+        throw new Error('color has to be type of `string`');
+    } else if (color.substr(0, 1) === '#') {
+        // or return if already rgb color
+        return {
+            hex: color,
+            alpha: 1
+        };
+    }
 
-    if (color.substr(0, 1) === '#') {
-        // return if already rgb color
-        return color;
-    } else if(!digits) {
-        // or return if input isn't a valid rgb(a) color
+    // parse input
+    var digits = /(.*?)rgb(a)*\((\d+),(\d+),(\d+)(,[0-9]*\.*[0-9]+)*\)/.exec(color.replace(/\s+/g,''));
+
+    if(!digits) {
+        // or throw error if input isn't a valid rgb(a) color
         throw new Error('given color (' + color + ') isn\'t a valid rgb or rgba color');
     }
 
