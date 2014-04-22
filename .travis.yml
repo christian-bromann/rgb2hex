@@ -1,6 +1,12 @@
 language: node_js
+
 node_js:
-- '0.10'
+  - '0.10'
+
+script: "npm run-script travis"
+
+after_script: "npm run-script cover"
+
 env:
   global:
   - secure: imoswT3Ym3I8iPp9hxTSl0ORrNMziwzJkWCbffeNdLV4QsivY4VCwp0xIFn8efQKCUQPRImbjLhOf05hWzGvjja6PNkjvAv/nHo+4MQYvWvjmMnlAlxDmfu7KatGBDQ0vq6W1FFNjT+h2tMs13IVJFwnE90sWwFbS2htcd3MXM4=
