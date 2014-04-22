@@ -19,13 +19,13 @@ $ bower install rgb2hex
 
 Include `rgb2hex.js in your web app*, by loading it as usual:
 
-```
+```html
 <script src="rgb2hex.js"></script>
-``
+```
 
 ### Using NodeJS
 
-```
+```js
 var rgb2hex = require('rgb2hex');
 
 console.log(rgb2hex('rgb(210,43,2525)'));
@@ -51,7 +51,7 @@ console.log(rgb2hex('rgba(12,173,22,.67)'));
 
 rgb2hex can be also loaded with AMD:
 
-```
+```js
 require(['rgb2hex'], function (rgb2hex) {
     // ...
 });
