@@ -1,7 +1,7 @@
 {
   "name": "rgb2hex",
   "version": "0.1.0",
-  "description": "parse any rgb or rgba string into a hex color",
+  "description": "lightweight rgb/rgba to hex parser",
   "main": "index.js",
   "directories": {
     "test": "test"

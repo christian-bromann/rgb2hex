@@ -6,7 +6,7 @@
   "authors": [
     "Christian Bromann <mail@christian-bromann.com>"
   ],
-  "description": "parse any rgb or rgba string into a hex color",
+  "description": "lightweight rgb/rgba to hex parser",
   "keywords": [
     "rgb",
     "rgba",

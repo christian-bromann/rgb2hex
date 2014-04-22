@@ -3,7 +3,7 @@ rgb2hex [![Build Status](https://travis-ci.org/christian-bromann/rgb2hex.svg?bra
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/rgb2hex.svg)](https://saucelabs.com/u/rgb2hex)
 
-parse any rgb or rgba string into a hex color
+Parse any rgb or rgba string into a hex color. Lightweight library, no dependencies!
 
 
 ## Installation
@@ -20,7 +20,7 @@ $ bower install rgb2hex
 
 ## Usage
 
-Include `rgb2hex.js in your web app*, by loading it as usual:
+Include `rgb2hex.js` in your web app, by loading it as usual:
 
 ```html
 <script src="rgb2hex.js"></script>
