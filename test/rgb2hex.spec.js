@@ -87,7 +87,7 @@ describe('rgb2hex should', function() {
 
         it('by limiting alpha value to 1', function() {
             var input = 'rgba(12,173,22,12312.67)';
-            rgb2hex.bind(null,input).should.not.be.above(1);
+            rgb2hex(input).alpha.should.not.be.above(1);
         })
 
     })
