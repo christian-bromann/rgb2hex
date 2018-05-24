@@ -8,15 +8,11 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.1",
-    "istanbul": "^0.4.5",
-    "mocha": "^5.2.0",
-    "should": "^13.2.1",
-    "zuul": "^3.11.1"
+    "jest": "^22.4.4"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/_mocha",
-    "travis": "./node_modules/.bin/zuul test/rgb2hex.spec.js",
-    "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --print -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test": "jest",
+    "cover": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -35,5 +31,15 @@
   "bugs": {
     "url": "https://github.com/christian-bromann/rgb2hex/issues"
   },
-  "homepage": "https://github.com/christian-bromann/rgb2hex"
+  "homepage": "https://github.com/christian-bromann/rgb2hex",
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
 }
