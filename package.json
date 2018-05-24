@@ -7,11 +7,11 @@
     "test": "test"
   },
   "devDependencies": {
-    "coveralls": "^2.10.0",
-    "istanbul": "^0.2.7",
-    "mocha": "^1.18.2",
-    "should": "^3.3.1",
-    "zuul": "^1.6.3"
+    "coveralls": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "should": "^13.2.1",
+    "zuul": "^3.11.1"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha",
