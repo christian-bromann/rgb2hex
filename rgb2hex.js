@@ -21,15 +21,15 @@
             throw new Error('given color (' + color + ') isn\'t a valid rgb or rgba color');
         }
 
-        var red = parseInt(digits[1]);
-        var green = parseInt(digits[2]);
-        var blue = parseInt(digits[3]);
+        var red = parseInt(digits[1], 10);
+        var green = parseInt(digits[2], 10);
+        var blue = parseInt(digits[3], 10);
         var alpha = digits[4] ? /([0-9\.]+)/.exec(digits[4])[0] : '1';
         var rgb = ((blue | green << 8 | red << 16) | 1 << 24).toString(16).slice(1);
 
         // parse alpha value into float
         if(alpha.substr(0,1) === '.') {
-            alpha = parseFloat('0' + alpha, 10);
+            alpha = parseFloat('0' + alpha);
         }
 
         // limit alpha value to 1
@@ -38,7 +38,7 @@
         }
 
         // cut alpha value after 2 digits after comma
-        alpha = parseFloat(Math.round(alpha * 100), 10) / 100;
+        alpha = parseFloat(Math.round(alpha * 100)) / 100;
 
         return {
             hex: '#' + rgb.toString(16),
