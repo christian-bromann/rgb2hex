@@ -63,3 +63,5 @@ maintain the existing coding style.
 
 ## Release History
 * 2013-04-22   v0.1.0   first working version
+* 2018-05-24   v0.1.1   updated dependencies switch test framework to jest
+* 2018-06-13   v0.1.2   Fixes uncontrolled resource consumption vulnerability referenced in #1. ([ref1](https://nodesecurity.io/advisories/647), [ref2](https://snyk.io/vuln/npm:rgb2hex:20180429))
