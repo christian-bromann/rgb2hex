@@ -21,7 +21,7 @@ var rgb2hex = module.exports = function rgb2hex(color) {
     }
 
     // parse input
-    var digits = /^rgba?\((\d+),(\d+),(\d+)(,(\d+)?\.?(\d+))?\)$/.exec(color.replace(/\s+/g,''));
+    var digits = /^rgba?\((\d+),(\d+),(\d+)(,(\d+)?\.?(\d+))?\);?$/.exec(color.replace(/\s+/g,''));
 
     if(!digits) {
         // or throw error if input isn't a valid rgb(a) color
