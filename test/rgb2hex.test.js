@@ -84,6 +84,13 @@ describe('rgb2hex should', () => {
             expect(rgb2hex(input).alpha).not.toBeGreaterThan(1)
         })
 
+        it('works with attributes right after', () => {
+          const rgbwithtext = 'rgb(0,0,0)somethingelse'
+          const rgbawithtext = 'rgba(0,0,0)somethingelse'
+
+          expect(rgb2hex(rgbwithtext).hex).toEqual('#000000')
+          expect(rgb2hex(rgbawithtext).hex).toEqual('#000000')
+        })
     })
 
     describe('not care about', () => {
