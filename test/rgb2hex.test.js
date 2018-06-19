@@ -87,7 +87,6 @@ describe('rgb2hex should', () => {
     })
 
     describe('not care about', () => {
-
         it('rgb or rgba prefix', () => {
             const rgb = 'rgb(0, 0, 0)'
             const rgba = 'rgba(0, 0, 0)'
@@ -115,6 +114,15 @@ describe('rgb2hex should', () => {
 
             expect(rgb2hex(rgbWithTerminatingSemicolon).hex).toEqual(rgb2hex(rgbWithoutTerminatingSemicolon).hex)
         })
-    })
 
+        it('stuff that is appended', () => {
+            expect(rgb2hex('rgb(0,0,0)0px0px8px').hex).toEqual(rgb2hex('rgb(0,0,0)').hex)
+            expect(rgb2hex('rgb(0,0,0)solid2px').hex).toEqual(rgb2hex('rgb(0,0,0)').hex)
+        })
+
+        it('stuff that is prepended', () => {
+            expect(rgb2hex('0px0px8pxrgb(0,0,0)').hex).toEqual(rgb2hex('rgb(0,0,0)').hex)
+            expect(rgb2hex('solid2pxrgb(0,0,0)').hex).toEqual(rgb2hex('rgb(0,0,0)').hex)
+        })
+    })
 })
