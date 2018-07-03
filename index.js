@@ -23,7 +23,7 @@ var rgb2hex = module.exports = function rgb2hex(color) {
     /**
      * strip any information around the color
      */
-    var strippedColor = color.slice(color.indexOf('rgb'), color.lastIndexOf(')') + 1).replace(/\s+/g,'');
+    var strippedColor = color.slice(color.indexOf('rgb'), color.indexOf(')') + 1).replace(/\s+/g,'');
 
     /**
      * parse input
