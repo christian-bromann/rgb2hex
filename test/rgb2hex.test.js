@@ -117,6 +117,8 @@ describe('rgb2hex should', () => {
 
         it('stuff that is appended', () => {
             expect(rgb2hex('rgb(0,0,0)0px0px8px').hex).toEqual(rgb2hex('rgb(0,0,0)').hex)
+            expect(rgb2hex('rgb(226,230,233)url("https://foo.bar.com")no-repeatscroll0%0%/100%padding-boxborder-box').hex).toEqual(rgb2hex('rgb(226,230,233)').hex)
+            expect(rgb2hex('rgba(226,230,233,0.4)url("https://foo.bar.com")no-repeatscroll0%0%/100%padding-boxborder-box').hex).toEqual(rgb2hex('rgba(226,230,233,0.4)').hex)
             expect(rgb2hex('rgb(0,0,0)solid2px').hex).toEqual(rgb2hex('rgb(0,0,0)').hex)
         })
 
