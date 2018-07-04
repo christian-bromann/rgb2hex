@@ -126,9 +126,10 @@ describe('rgb2hex should', () => {
         })
 
         it('stuff that is prepended and appended', () => {
-            const url = 'https://bb6dcf512b33241ef106-b12771d2b2eb9c49cc5bd30e7bd6a290.ssl.cf2.rackcdn.com/5q2ppv8j1dld9di26je03y9k77arp45b'
+            const url = 'https://foo.bar.com/123.abc.456'
             const values = `url("${url}")no-repeatscroll0%0%/100%padding-boxborder-box`
             expect(rgb2hex(`${values}rgb(226,230,233)${values}`).hex)
+            expect(rgb2hex(`${values}rgba(226,230,233,0.4)${values}`).hex)
         })
     })
 })
