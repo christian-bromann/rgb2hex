@@ -67,3 +67,4 @@ maintain the existing coding style.
 * 2018-06-13   v0.1.2   Fixes uncontrolled resource consumption vulnerability referenced in #1. ([ref1](https://nodesecurity.io/advisories/647), [ref2](https://snyk.io/vuln/npm:rgb2hex:20180429))
 * 2013-06-13   v0.1.3   allow semicolon at the end of an rgb string
 * 2013-06-19   v0.1.4   ignore text before or after the color
+* 2013-07-04   v0.1.5   Fix stripping of color and regexp
