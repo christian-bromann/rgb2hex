@@ -14,14 +14,14 @@
         }
 
         /**
-         * strip any information around the color
+         * strip spaces
          */
-        var strippedColor = color.slice(color.indexOf('rgb'), color.lastIndexOf(')') + 1).replace(/\s+/g,'');
+        var strippedColor = color.replace(/\s+/g,'');
 
         /**
          * parse input
          */
-        var digits = /^rgba?\((\d+),(\d+),(\d+)(,(\d+)?\.?(\d+))?\);?$/.exec(strippedColor);
+        var digits = /rgba?\((\d+),(\d+),(\d+)(,(\d+)?\.?(\d+))?\);?/.exec(strippedColor);
 
         if(!digits) {
             // or throw error if input isn't a valid rgb(a) color
