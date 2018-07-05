@@ -70,3 +70,4 @@ maintain the existing coding style.
 * 2018-07-04   v0.1.5   Fix stripping of color and regexp
 * 2018-07-05   v0.1.6   Prevent Regular Expression Denial of Service attacks
 * 2018-07-05   v0.1.7   Minor coverage fix
+* 2018-07-05   v0.1.8   Better handle alpha values
