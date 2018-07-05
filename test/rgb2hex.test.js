@@ -80,7 +80,7 @@ describe('rgb2hex should', () => {
         })
 
         it('by limiting alpha value to 1', () => {
-            var input = 'rgba(12,173,22,1.67)'
+            var input = 'rgba(236,68,44,1)'
             expect(rgb2hex(input).alpha).not.toBeGreaterThan(1)
         })
 
@@ -94,6 +94,8 @@ describe('rgb2hex should', () => {
             input = 'rgba(113, 54, 4, 2.33)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
             input = 'rgbaaaaaa(113, 54, 4, .33)'
+            expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
+            input = 'rgba(12,173,22,1.67)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
         })
     })
