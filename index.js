@@ -28,21 +28,21 @@ var rgb2hex = module.exports = function rgb2hex(color) {
     /**
      * parse input
      */
-    var digits = /rgba?\((\d+),(\d+),(\d+)(,(\d+)?\.?(\d+))?\);?/.exec(strippedColor);
+    var digits = /(.*?)rgb(a)??\((\d{1,3}),(\d{1,3}),(\d{1,3})(,[01]??\.([0-9]{0,3}))??\)/.exec(strippedColor);
 
     if(!digits) {
         // or throw error if input isn't a valid rgb(a) color
         throw new Error('given color (' + color + ') isn\'t a valid rgb or rgba color');
     }
 
-    var red = parseInt(digits[1], 10);
-    var green = parseInt(digits[2], 10);
-    var blue = parseInt(digits[3], 10);
-    var alpha = digits[4] ? /([0-9\.]+)/.exec(digits[4])[0] : '1';
+    var red = parseInt(digits[3], 10);
+    var green = parseInt(digits[4], 10);
+    var blue = parseInt(digits[5], 10);
+    var alpha = digits[6] ? /([0-9\.]+)/.exec(digits[6])[0] : '1';
     var rgb = ((blue | green << 8 | red << 16) | 1 << 24).toString(16).slice(1);
 
     // parse alpha value into float
-    if(alpha.substr(0,1) === '.') {
+    if(alpha.substr(0,2) === ',.') {
         alpha = parseFloat('0' + alpha);
     }
 
