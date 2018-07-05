@@ -35,7 +35,7 @@
         var rgb = ((blue | green << 8 | red << 16) | 1 << 24).toString(16).slice(1);
 
         // parse alpha value into float
-        if(alpha.substr(0,2) === ',.') {
+        if(alpha.substr(0,1) === '.') {
             alpha = parseFloat('0' + alpha);
         }
 
