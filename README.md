@@ -69,3 +69,4 @@ maintain the existing coding style.
 * 2018-06-19   v0.1.4   ignore text before or after the color
 * 2018-07-04   v0.1.5   Fix stripping of color and regexp
 * 2018-07-05   v0.1.6   Prevent Regular Expression Denial of Service attacks
+* 2018-07-05   v0.1.7   Minor coverage fix
