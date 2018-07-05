@@ -46,11 +46,6 @@ var rgb2hex = module.exports = function rgb2hex(color) {
         alpha = parseFloat('0' + alpha);
     }
 
-    // limit alpha value to 1
-    if(alpha > 1) {
-        alpha = 1;
-    }
-
     // cut alpha value after 2 digits after comma
     alpha = parseFloat(Math.round(alpha * 100)) / 100;
 
