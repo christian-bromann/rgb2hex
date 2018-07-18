@@ -5,39 +5,39 @@ const invalidErrorMessage = (input) => 'given color (' + input + ') isn\'t a val
 describe('rgb2hex should', () => {
     describe('throw an error if input is not typeof string', () => {
         it('[Object] {color: \'something\'}', () => {
-            var input = {color: 'something'}
+            const input = {color: 'something'}
             expect(() => rgb2hex(input)).toThrow(typeofErrorMessage)
         })
 
         it('[Function] function(){}', () => {
-            var input = function(){}
+            const input = function(){}
             expect(() => rgb2hex(input)).toThrow(typeofErrorMessage)
         })
 
         it('[Number] 231', () => {
-            var input = 231
+            const input = 231
             expect(() => rgb2hex(input)).toThrow(typeofErrorMessage)
         })
     })
 
     describe('throw an error if input is invalid', () => {
         it('notacolor', () => {
-            var input = 'notacolor'
+            const input = 'notacolor'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
         })
 
         it('rgba(100, 100)', () => {
-            var input = 'rgb(100, 100)'
+            const input = 'rgb(100, 100)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
         })
 
         it('rgba(100, 10a0, 200, 300)', () => {
-            var input = 'rgba(100, 10a0, 200, 300)'
+            const input = 'rgba(100, 10a0, 200, 300)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
         })
 
         it('rgba(23, 54, 4, -.33)', () => {
-            var input = 'rgba(23, 54, 4, -.33)'
+            const input = 'rgba(23, 54, 4, -.33)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
         })
     })
@@ -80,12 +80,12 @@ describe('rgb2hex should', () => {
         })
 
         it('by limiting alpha value to 1', () => {
-            var input = 'rgba(236,68,44,1)'
+            const input = 'rgba(236,68,44,1)'
             expect(rgb2hex(input).alpha).not.toBeGreaterThan(1)
         })
 
         it('by not accepting to big values', () => {
-            var input = 'rgba(1123, 54, 4, 0.33)'
+            let input = 'rgba(1123, 54, 4, 0.33)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
             input = 'rgba(113, 1154, 4, 0.33)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
@@ -97,6 +97,12 @@ describe('rgb2hex should', () => {
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
             input = 'rgba(12,173,22,1.67)'
             expect(() => rgb2hex(input)).toThrow(invalidErrorMessage(input))
+        })
+
+        it('transparent color', () => {
+            const input = 'rgba(0, 0, 0, 0)'
+            expect(rgb2hex(input).alpha).toBe(0)
+            expect(rgb2hex(input).hex).toBe('#000000')
         })
     })
 
