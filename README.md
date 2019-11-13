@@ -72,3 +72,4 @@ maintain the existing coding style.
 * 2018-07-05   v0.1.7   Minor coverage fix
 * 2018-07-05   v0.1.8   Better handle alpha values
 * 2018-07-18   v0.1.9   Support transparent colors
+* 2019-11-11   v0.1.10  Support multiple decimal places [(#20)](https://github.com/christian-bromann/rgb2hex/pull/20)
