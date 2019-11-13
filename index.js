@@ -28,7 +28,7 @@ var rgb2hex = module.exports = function rgb2hex(color) {
     /**
      * parse input
      */
-    var digits = /(.*?)rgb(a)??\((\d{1,3}),(\d{1,3}),(\d{1,3})(,([01]|0??\.([0-9]{0,3})))??\)/.exec(strippedColor);
+    var digits = /(.*?)rgb(a)??\((\d{1,3}),(\d{1,3}),(\d{1,3})(,([01]|0??\.([0-9]{0,})))??\)/.exec(strippedColor);
 
     if(!digits) {
         // or throw error if input isn't a valid rgb(a) color

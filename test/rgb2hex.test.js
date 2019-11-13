@@ -67,8 +67,8 @@ describe('rgb2hex should', () => {
             expect(parsedValue.alpha).toEqual(1)
         })
 
-        it('converting rgba(12,173,22,.67)', () => {
-            const input = 'rgba(12,173,22,.67)'
+        it('converting rgba(12,173,22,.67313)', () => {
+            const input = 'rgba(12,173,22,.67313)'
             const parsedValue = rgb2hex(input)
 
             expect(parsedValue).toHaveProperty('hex')
