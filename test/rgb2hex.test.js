@@ -104,6 +104,12 @@ describe('rgb2hex should', () => {
             expect(rgb2hex(input).alpha).toBe(0)
             expect(rgb2hex(input).hex).toBe('#000000')
         })
+
+        it('double digit alpha values', () => {
+            const input = 'rgba(0, 0, 0, 1.00)'
+            expect(rgb2hex(input).alpha).toBe(1)
+            expect(rgb2hex(input).hex).toBe('#000000')
+        })
     })
 
     describe('not care about', () => {

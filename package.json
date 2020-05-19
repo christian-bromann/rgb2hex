@@ -1,22 +1,25 @@
 {
   "name": "rgb2hex",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "lightweight rgb/rgba to hex parser",
+  "author": "Christian Bromann <mail@christian-bromann.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/christian-bromann/rgb2hex",
   "main": "index.js",
-  "directories": {
-    "test": "test"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/christian-bromann/rgb2hex.git"
   },
-  "devDependencies": {
-    "coveralls": "^3.0.1",
-    "jest": "^25.0.0"
+  "bugs": {
+    "url": "https://github.com/christian-bromann/rgb2hex/issues"
   },
   "scripts": {
     "test": "jest",
     "cover": "jest --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/christian-bromann/rgb2hex.git"
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "jest": "^26.0.1"
   },
   "keywords": [
     "rgb",
@@ -26,12 +29,6 @@
     "parse",
     "parser"
   ],
-  "author": "Christian Bromann <mail@christian-bromann.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/christian-bromann/rgb2hex/issues"
-  },
-  "homepage": "https://github.com/christian-bromann/rgb2hex",
   "jest": {
     "coverageThreshold": {
       "global": {
