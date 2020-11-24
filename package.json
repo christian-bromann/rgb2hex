@@ -18,8 +18,7 @@
     "cover": "jest --coverage"
   },
   "devDependencies": {
-    "coveralls": "^3.1.0",
-    "jest": "^26.0.1"
+    "jest": "^26.6.3"
   },
   "types": "./index.d.ts",
   "keywords": [
