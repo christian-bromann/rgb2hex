@@ -1,4 +1,4 @@
-rgb2hex [![Build Status](https://travis-ci.org/christian-bromann/rgb2hex.svg?branch=master)](https://travis-ci.org/christian-bromann/rgb2hex) [![Coverage Status](https://coveralls.io/repos/christian-bromann/rgb2hex/badge.png)](https://coveralls.io/r/christian-bromann/rgb2hex) [![Known Vulnerabilities](https://snyk.io/test/github/christian-bromann/rgb2hex/badge.svg?targetFile=package.json)](https://snyk.io/test/github/christian-bromann/rgb2hex?targetFile=package.json)
+rgb2hex ![Test Changes](https://github.com/christian-bromann/rgb2hex/workflows/Test%20Changes/badge.svg) [![Known Vulnerabilities](https://snyk.io/test/github/christian-bromann/rgb2hex/badge.svg?targetFile=package.json)](https://snyk.io/test/github/christian-bromann/rgb2hex?targetFile=package.json)
 =======
 
 Parse any rgb or rgba string into a hex color. Lightweight library, no dependencies!
@@ -73,3 +73,4 @@ maintain the existing coding style.
 * 2018-07-05   v0.1.8   Better handle alpha values
 * 2018-07-18   v0.1.9   Support transparent colors
 * 2019-11-11   v0.1.10  Support multiple decimal places [(#20)](https://github.com/christian-bromann/rgb2hex/pull/20)
+* 2020-11-24   v0.2.1   TypeScript support
