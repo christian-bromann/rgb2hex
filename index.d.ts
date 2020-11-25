@@ -1,5 +1,5 @@
 declare const rgb2hex: {
-	(rgb: string): Promise<boolean>
+	(rgb: string): HexColor
 }
 
 namespace rgb2hex {
