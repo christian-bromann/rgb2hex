@@ -74,3 +74,4 @@ maintain the existing coding style.
 * 2018-07-18   v0.1.9   Support transparent colors
 * 2019-11-11   v0.1.10  Support multiple decimal places [(#20)](https://github.com/christian-bromann/rgb2hex/pull/20)
 * 2020-11-24   v0.2.1   TypeScript support
+* 2020-11-25   v0.2.2   Improved TypeScript support

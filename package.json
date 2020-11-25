@@ -1,6 +1,6 @@
 {
   "name": "rgb2hex",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "lightweight rgb/rgba to hex parser",
   "author": "Christian Bromann <mail@christian-bromann.com>",
   "license": "MIT",

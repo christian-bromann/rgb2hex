@@ -1,10 +1,12 @@
-declare module "rgb2hex" {
+declare const rgb2hex: {
+	(rgb: string): Promise<boolean>
+}
+
+namespace rgb2hex {
     interface HexColor {
         hex: string,
         alpha: number
     }
-
-    type rgb2hex = (color: string) => HexColor
-
-    export default rgb2hex
 }
+
+export = rgb2hex
