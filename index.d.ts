@@ -1,8 +1,15 @@
-export as namespace rgb2hex;
-
-export interface HexColor {
-    hex: string,
-    alpha: number
+declare namespace rgb2hex {
+    interface HexColor {
+        hex: string,
+        alpha: number
+    }
 }
 
-export function rgb2hex(rgb: string): HexColor;
+declare const rgb2hex: {
+    (rgb: string): {
+        hex: string,
+        alpha: number
+    }
+}
+
+export = rgb2hex
